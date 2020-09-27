@@ -1,57 +1,9 @@
-<!-- <div class="container">
-    <h1>Add New Board</h1>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap" draggable="true">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-</div> -->
-<div id="myContrId" class="board-layout">
-   
+<div id="myContrId" class="board-layout"> 
     <div class="left">
       <div class="board-text">{{boardTitle}}</div>
       <button type="button" class="btn btn-primary" ng-click="addNewList()">+ Add new list</button>
     </div>
-   
   <div id='boardlists' class="board-lists">
-    <!-- <div id='list1' class="board-list" ondrop="angular.element(document.getElementById('myContrId')).scope().dropIt(event)" ondragover="angular.element(document.getElementById('myContrId')).scope().allowDrop(event)">
-      <div class="list-title">
-        To Do
-      </div>
-      
-        <div  id='card1' class="card" draggable="true" ondragstart="angular.element(document.getElementById('myContrId')).scope().dragStart(event)">
-        Work on article
-        </div>
-        <div  id='card2' class="card" draggable="true" ondragstart="angular.element(document.getElementById('myContrId')).scope().dragStart(event)">
-        Back up database
-        </div>
-        <div id='card3' class="card" draggable="true" ondragstart="angular.element(document.getElementById('myContrId')).scope().dragStart(event)">
-        Build Lambda function
-        </div>
-        <div id='card4' class="card" draggable="true" ondragstart="angular.element(document.getElementById('myContrId')).scope().dragStart(event)">
-        Work on course content
-        </div>
-        <div id='card5' class="card" draggable="true" ondragstart="angular.element(document.getElementById('myContrId')).scope().dragStart(event)">
-        Debug SQL code
-        </div>
-     
-    </div>
-    <div  id='list2' class="board-list" ondrop="angular.element(document.getElementById('myContrId')).scope().dropIt(event)" ondragover="angular.element(document.getElementById('myContrId')).scope().allowDrop(event)">
-      <div  class="list-title">
-      In Progress
-      </div>
-      
-      
-    </div>
-    <div  id='list3' class="board-list"  ondrop="angular.element(document.getElementById('myContrId')).scope().dropIt(event)" ondragover="angular.element(document.getElementById('myContrId')).scope().allowDrop(event)">
-      <div  class="list-title">
-        Done
-        </div>
-         
-        </div> -->
     <div id="mainBoard" ng-repeat="(key, value) in boardData[indexOfBoard].lists track by $index">
         <div  id='{{key}}' class="board-list" ondrop="angular.element(document.getElementById('myContrId')).scope().dropIt(event)" ondragover="angular.element(document.getElementById('myContrId')).scope().allowDrop(event)">
             <div id='title-{{key}}' class="list-title">
