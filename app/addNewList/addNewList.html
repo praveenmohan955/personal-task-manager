@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Create new list</h2>
+    <form id="add-new-list-form" name="add-new-board-form" novalidate>
+        <div>
+            <label required>List name:</label>
+            <input type="text" id="list-name" class="form-control" ng-model="listName" ng-required="true">
+        </div>
+    </form>
+    <button type="button" class="btn btn-primary" ng-disabled="add-new-list-form.$invalid" ng-click="$close(listName)">Create</button>
+</div>

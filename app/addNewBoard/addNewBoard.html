@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Create new board</h2>
+    <form id="add-new-board-form" name="add-new-board-form" novalidate>
+        <div>
+            <label required>Board name:</label>
+            <input type="text" id="board-name" class="form-control" ng-model="boardName" ng-required="true">
+        </div>
+        <div>
+            <label required>Description:</label>
+            <input type="text" id="board-description" class="form-control" ng-model="boardDescription" ng-required="true">
+        </div>
+    </form>
+    <button type="button" class="btn btn-primary" ng-disabled="add-new-board-form.$invalid" ng-click="$close({boardName, boardDescription})">Create</button>
+</div>

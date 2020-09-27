@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>View card</h2>
+    <form id="add-new-card-form" name="add-new-board-form" novalidate>
+        <div>
+            <label required><b>Card title:</b> {{currentCardTitle}}</label>
+        </div>
+        <div>
+            <label required><b>Card description:</b> {{currentCardDescription}}</label>
+        </div>
+    </form>
+    <button type="button" class="btn btn-danger" ng-disabled="add-new-card-form.$invalid" ng-click="$close({currentCardTitle,currentCardDescription})">Delete card</button>
+</div>

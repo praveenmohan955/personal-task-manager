@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Add new card</h2>
+    <form id="add-new-card-form" name="add-new-board-form" novalidate>
+        <div>
+            <label required>Card title:</label>
+            <input type="text" id="card-title" class="form-control" ng-model="cardTitle" ng-required="true">
+        </div>
+        <div>
+            <label required>Card description:</label>
+            <input type="text" id="card-description" class="form-control" ng-model="cardDescription" ng-required="true">
+        </div>
+    </form>
+    <button type="button" class="btn btn-primary" ng-disabled="add-new-card-form.$invalid" ng-click="$close({cardTitle,cardDescription})">Add</button>
+</div>

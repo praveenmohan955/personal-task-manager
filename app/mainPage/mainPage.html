@@ -1,0 +1,20 @@
+<div class="container">
+  <div>
+    <h1>Personal Task Manager</h1>
+    <button type="button" class="btn btn-primary" ng-click="addNewBoard()">Create New Board</button>
+  </div>
+  <br>
+  <div class="row">
+    <div ng-repeat="board in boards" >
+    <div class="col-sm-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{board.boardName}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{board.boardDescription}}</h6>
+          <button type="button" class="btn btn-primary" ng-click="redirectToBoard(board.boardName)">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div> 
